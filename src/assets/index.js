@@ -16,5 +16,7 @@ import mocha from "./mocha.jpg";
 import press from "./press.jpg";
 import vanilla from "./vanilla.jpg";
 
+import basket from "./basket.svg";
 
-export { logo, herobg, aboutbg, americano, cappuccino, cocoa, coldbrew, dolce, doubleshot, icedespresso, latte, macchiato, matcha, mocha, press, vanilla };
+
+export { logo, herobg, aboutbg, americano, cappuccino, cocoa, coldbrew, dolce, doubleshot, icedespresso, latte, macchiato, matcha, mocha, press, vanilla, basket };

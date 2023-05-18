@@ -5,12 +5,10 @@ export default {
     extend: {
       colors: {
         primary: "#606060",
-        secondary: "#00754a"
+        secondary: "#00754a",
+        tertiary: "#005c3a"
+      },
 
-      },
-      boxShadow: {
-        card: "0px 35px 120px -15px #000000"
-      },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.webp')",
       },

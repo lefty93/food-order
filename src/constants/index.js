@@ -1,5 +1,7 @@
-// TODO Need to ADD price f "or ",each drinks
-import { americano, cappuccino, cocoa, coldbrew, dolce, doubleshot, icedespresso, latte, macchiato, matcha, mocha, press, vanilla } from "../assets";
+
+import { americano, cappuccino, cocoa, coldbrew, dolce, doubleshot, icedespresso, latte, macchiato, matcha, mocha, press, vanilla,  } from "../assets";
+
+
 
 export const coffeeMenu = [
     {
@@ -132,10 +134,6 @@ export const navLinks = [
         id: "menu",
         title: "Menu",
     },
-    {
-        id: "contact",
-        title: "Contact",
-    }
 
 ];
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FiMenu, FiX } from "react-icons/fi";
 import { styles } from '../styles';
 import { Link } from 'react-router-dom';
-import { logo } from '../assets';
+import { logo, basket } from '../assets';
 import { navLinks } from '../constants';
 import { IconContext } from 'react-icons';
 
@@ -30,17 +30,21 @@ const Navbar = () => {
               <Link to={`/${navlink.id}`}>{navlink.title}</Link>
             </li>
           ))}
+          <Link to="/order"><img src={basket} alt="" className='h-[24px] w-[24px]' /></Link>
         </ul>
 
         <div className='flex items-center justify-end flex-1 sm:hidden'>
+          <Link to="/order"><img src={basket} alt="" className='h-[24px] w-[24px]' /></Link>
           <IconContext.Provider value={{ size: '24px' }}>
             <div onClick={() => setToggle((prev) => !prev)}>
               {toggle ? <FiX /> : <FiMenu />}
             </div>
-
           </IconContext.Provider>
+
           <div className={`${toggle ? 'flex' : 'hidden'}`}>
+
             <ul className={`flex-row list-none`}>
+
               {navLinks.map((navlink) => (
                 <li key={navlink.id}
                   className={`${active === navlink.title ? "text-secondary" : "text-black"} hover:text-secondary font-bold text-[18px] cursor-pointer`}
@@ -48,6 +52,7 @@ const Navbar = () => {
                   <Link to={`/${navlink.id}`}>{navlink.title}</Link>
                 </li>
               ))}
+
             </ul>
           </div>
         </div>
