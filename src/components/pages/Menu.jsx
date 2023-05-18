@@ -8,7 +8,7 @@ import { styles } from '../../styles'
 const CardComponent = ({ name, image, price }) => {
   return (
     <div
-      className="border-[1px] rounded-[20px] bg-white shadow-2xl w-full container flex flex-col sm:items-start items-center">
+      className="border-[2px] rounded-[20px] bg-white w-full container flex flex-col sm:items-start items-center">
 
       <img
         className="object-contain rounded-[20px]"
@@ -46,7 +46,7 @@ const Menu = () => {
     <section className='mx-auto container mb-10'>
       <div className='mt-[120px] flex flex-col' >
 
-        <motion.div animate="show" initial="hidden" variants={textVariant2()} className='mb-6 mx-5 xl:mx-12'>
+        <motion.div animate="show" initial="hidden" variants={textVariant2(0.5)} className='mb-6 mx-5 xl:mx-12'>
           <h2 className={`${styles.sectionHeadText}`}>MENU</h2>
           <p className={`${styles.sectionSubText}`}>Amazing Coffee And Handcrafted Beverages To Discover And Enjoy</p>
         </motion.div>

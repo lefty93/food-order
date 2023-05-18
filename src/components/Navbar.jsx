@@ -23,9 +23,11 @@ const Navbar = () => {
 
         <ul className='flex-row hidden gap-10 list-none sm:flex'>
           {navLinks.map((navlink) => (
-            <li key={navlink.id}
-              className={`${active === navlink.title ? "text-secondary" : "text-black"} hover:text-secondary font-bold text-[18px] cursor-pointer hover:border-b-4 border-secondary h-[40px]`}
+            <li
+              key={navlink.id}
+              className={`${active === navlink.title ? "text-secondary" : "text-black"} hover:text-secondary font-bold text-[18px] cursor-pointer hover:border-b-4 border-secondary h-[40px]}`}
               onClick={() => setActive(navlink.title)}
+              
             >
               <Link to={`/${navlink.id}`}>{navlink.title}</Link>
             </li>

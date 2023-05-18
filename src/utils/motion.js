@@ -23,7 +23,6 @@ export const textVariant2 = (delay) => {
         hidden: {
             opacity: 0,
             scale: 1,
-        
             y: -10,
         },
         show: {
@@ -31,7 +30,7 @@ export const textVariant2 = (delay) => {
             scale: 1,
             y: 0,
             transition: {
-                duration: 1.5,
+                duration: 1,
                 delay: delay,
                 ease: "easeOut",
             },
