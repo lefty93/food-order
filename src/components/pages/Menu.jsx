@@ -4,17 +4,13 @@ import { coffeeMenu } from '../../constants'
 import { container, variants, item } from '../../utils/motion'
 import { textVariant2 } from '../../utils/motion'
 import { styles } from '../../styles'
-
 import CardComponent from '../CardComponent'
 
 
 
 
-
 const Menu = () => {
-  const [show, setShow] = useState(false);
-  const [info, setInfo] = useState();
-
+  
 
   return (
     <section className='mx-auto container mb-10'>

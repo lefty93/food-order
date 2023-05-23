@@ -2,6 +2,17 @@ import React from 'react'
 import { useStateValue } from '../context/StateProvider';
 
 const CardComponent = ({ name, image, price }) => {
+    const [{ cart }, dispatch] = useStateValue();
+    const addToCart = () => {
+        dispatch({
+            type: "ADD_TO_CART",
+            coffee: {
+                name: name,
+                image: image,
+                price: price,
+            }
+        });
+    }
     return (
         <div
             className="border-[2px] rounded-[20px] bg-white w-full container flex flex-col sm:items-start items-center">
@@ -19,7 +30,8 @@ const CardComponent = ({ name, image, price }) => {
                 <button
                     type="button"
                     className="inline-block rounded bg-secondary px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] hover:bg-tertiary"
-                    
+                    onClick={addToCart}
+
                 >
                     Add to basket - {price}
                 </button>
