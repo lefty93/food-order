@@ -1,12 +1,13 @@
 import React from 'react'
 import { useStateValue } from '../context/StateProvider';
 
-const CardComponent = ({ name, image, price }) => {
+const CardComponent = ({ id, name, image, price }) => {
     const [{ cart }, dispatch] = useStateValue();
     const addToCart = () => {
         dispatch({
             type: "ADD_TO_CART",
             coffee: {
+                id:id,
                 name: name,
                 image: image,
                 price: price,

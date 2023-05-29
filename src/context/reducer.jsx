@@ -1,22 +1,30 @@
-export const initialState = {
+const sessionState = JSON.parse(sessionStorage.getItem("state"))
+
+
+export const initialState = sessionState ? sessionState : {
     cart: []
 }
 
-export const getCoffeeTotal = (cart) =>
-    cart?.reduce((amount, coffee) => coffee.price + amount, 0);
-
 function reducer(state, action) {
-    console.log(action)
-
+    console.log(state.cart)
     switch (action.type) {
         case "ADD_TO_CART":
-            return {
+            const newState = {
                 ...state,
                 cart: [...state.cart, action.coffee]
-            }
+            };
+
+            sessionStorage.setItem("state", JSON.stringify(newState));
+            return newState
+
         default:
             return state;
     }
 }
+
+
+
+
+
 
 export default reducer;
