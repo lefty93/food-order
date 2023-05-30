@@ -7,7 +7,7 @@ import { navLinks } from '../constants';
 import { IconContext } from 'react-icons';
 import { BsFillBagFill } from "react-icons/bs";
 import { useStateValue } from '../context/StateProvider';
-import Cart from './Cart';
+
 // import { getCoffeeTotal } from '../context/reducer';
 
 const Navbar = () => {
@@ -62,7 +62,14 @@ const Navbar = () => {
               >
                 <div className='w-16 h-60'>
                   <span className='text-[24px] text-center'>Cart</span>
-                  
+                  <ul>
+                    {cart.map((item) => (
+                      <li key={item.id}>
+                        {item.name} - Count: {item.count}
+                      </li>
+                    ))}
+                  </ul>
+
                   {/* <ul>
                     {cart.map((cartitem) => (
                       <li key={cartitem.id}>
@@ -111,5 +118,6 @@ const Navbar = () => {
     </nav>
   )
 }
+
 
 export default Navbar

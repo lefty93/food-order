@@ -4,6 +4,8 @@ import { useStateValue } from '../context/StateProvider';
 const CardComponent = ({ id, name, image, price }) => {
     const [{ cart }, dispatch] = useStateValue();
     const addToCart = () => {
+        console.log("Dispatching ADD_TO_CART action");
+
         dispatch({
             type: "ADD_TO_CART",
             coffee: {
