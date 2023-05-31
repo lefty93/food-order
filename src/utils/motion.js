@@ -67,3 +67,8 @@ export const variants = {
     },
     hidden: { scale: 1, opacity: 0 },
 };
+
+export const popoverVariants = {
+    hidden: { scale: 0, },
+    visible: { scale: 1, transformOrigin: 'top right' },
+}

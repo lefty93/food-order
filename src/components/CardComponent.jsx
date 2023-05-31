@@ -1,5 +1,8 @@
 import React from 'react'
 import { useStateValue } from '../context/StateProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const CardComponent = ({ id, name, image, price }) => {
     const [{ cart }, dispatch] = useStateValue();
@@ -9,13 +12,21 @@ const CardComponent = ({ id, name, image, price }) => {
         dispatch({
             type: "ADD_TO_CART",
             coffee: {
-                id:id,
+                id: id,
                 name: name,
                 image: image,
                 price: price,
             }
+            
         });
+        toast.success("You have add a drink.");
     }
+
+    // const notify = () => toast.success("Success Notification !", {
+    //     position: toast.POSITION.TOP_CENTER
+    // });
+
+
     return (
         <div
             className="border-[2px] rounded-[20px] bg-white w-full container flex flex-col sm:items-start items-center">
@@ -39,6 +50,7 @@ const CardComponent = ({ id, name, image, price }) => {
                     Add to basket - {price}
                 </button>
             </div>
+            <ToastContainer autoClose={1200} />
         </div>
     )
 }

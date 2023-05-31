@@ -8,12 +8,9 @@ export const initialState = sessionState ? sessionState : {
 function reducer(state, action) {
     console.log("Current state:", state.cart);
     console.log("Action:", action);
+
     switch (action.type) {
         case "ADD_TO_CART":
-            // const newState = {
-            //     ...state,
-            //     cart: [...state.cart, action.coffee]
-            // };
             const existingItemIndex = state.cart.findIndex(
                 (item) => item.id === action.coffee.id
             );
@@ -22,31 +19,38 @@ function reducer(state, action) {
                     if (index === existingItemIndex) {
                         return {
                             ...item,
-                            count: item.count + 1,
+                            count: item.count + 1
                         };
                     }
                     return item;
                 });
-                return {
+                const updatedState = {
                     ...state,
-                    cart: updatedCart,
+                    cart: updatedCart
                 };
+                localStorage.setItem("state", JSON.stringify(updatedState)); // Save updated state to localStorage
+                return updatedState;
             } else {
                 const newItem = {
                     ...action.coffee,
-                    count: 1,
+                    count: 1
                 };
-                return {
+                const updatedState = {
                     ...state,
-                    cart: [...state.cart, newItem],
+                    cart: [...state.cart, newItem]
                 };
+                localStorage.setItem("state", JSON.stringify(updatedState)); // Save updated state to localStorage
+                return updatedState;
             }
+
         default:
             return state;
     }
-};
+}
 
 export default reducer;
+
+// TODO REMOVE_FROM_CART
 
 // const newState = JSON.parse(JSON.stringify(state));
 // console.log("New state:", newState.cart);
