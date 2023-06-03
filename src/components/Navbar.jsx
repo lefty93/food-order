@@ -85,6 +85,7 @@ const Navbar = () => {
                         <div className="text-xs text-gray-500">QTY: {item.count}</div>
                       </div>
                     </li>
+                    
                   ))}
                 </ul>
                 <div className="mt-4 text-center">

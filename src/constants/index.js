@@ -12,7 +12,7 @@ export const coffeeMenu = [
         "id": "e2a6f93e-0df3-4cdd-a38d-3c7e17a5a1f8",
         "name": "Caffe Americano",
         "image": americano,
-        "price": "12.20",
+        "price": "10.49",
     },
     {
         "id": "5c8f9a1a-d6b4-44c3-9f12-6a9719cda432",
