@@ -48,7 +48,7 @@ const Navbar = () => {
             </li>
           ))}
 
-          {/* TODO Customize the POPOVER CART */}
+         
           <div className="relative">
             <Link to="/order">
               <BsFillBagFill className="h-[24px] w-[24px]" onMouseEnter={handleMouseEnter} />
@@ -100,7 +100,7 @@ const Navbar = () => {
         </ul>
 
         <div className='flex items-center justify-end flex-1 sm:hidden'>
-          <Link to="/order"><BsFillBagFill className='h-[24px] w-[24px]' /></Link>
+          <Link to="/order"><BsFillBagFill className='h-[24px] w-[24px] mr-5' /></Link>
           <IconContext.Provider value={{ size: '24px' }}>
             <div onClick={() => setToggle((prev) => !prev)}>
               {toggle ? <FiX /> : <FiMenu />}

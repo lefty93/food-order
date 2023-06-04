@@ -16,20 +16,24 @@ const Menu = () => {
 
 
   return (
-    <section className='mx-auto mt-32'>
-      <div className='flex flex-col'>
+   
+      <section className='mx-auto py-32'>
+        <div className='flex flex-col'>
 
-        <motion.div animate="show" initial="hidden" variants={textVariant2(0.5)} className='mb-6 mx-5 xl:mx-12'>
-          <h2 className={`${styles.sectionHeadText}`}>MENU</h2>
-          <p className={`${styles.sectionSubText}`}>Amazing Coffee And Handcrafted Beverages To Discover And Enjoy</p>
-        </motion.div>
+          <motion.div animate="show" initial="hidden" variants={textVariant2(0.5)} className='mb-6 mx-5 xl:mx-12'>
+            <h2 className={`${styles.sectionHeadText}`}>MENU</h2>
+            <p className={`${styles.sectionSubText}`}>Amazing Coffee And Handcrafted Beverages To Discover And Enjoy</p>
+          </motion.div>
 
-        <MenuTab />
-        <ToastContainer autoClose={1200} />
+          <MenuTab />
+          <ToastContainer autoClose={1200} />
 
-      </div>
-    </section>
+        </div>
+      </section>
 
+      
+    
+   
 
   )
 }

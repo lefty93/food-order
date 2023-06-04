@@ -29,8 +29,8 @@ const Order = () => {
                 <div className='rounded-lg md:w-2/3 '>
                     <div className='justify-between mb-6 rounded-lg bg-white h-full shadow-md sm:flex sm:justify-start flex flex-col'>
                         {cart?.length === 0 ? (
-                            <p>
-                                You have no items in your basket. To buy one or more, click "Add to basket" next to the item.
+                            <p className='p-8'>
+                                You have no items in your cart. To buy one or more, click "Add to basket" next to the item.
                             </p>
                         ) : (
                             cart.map((item, index) => (

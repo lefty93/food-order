@@ -8,9 +8,9 @@ const MenuTab = () => {
         setSelectedTab(tab);
     }
     return (
-        <div className="flex justify-center mt-4">
-            <ul className="grid grid-cols-1 gap-5 md:mx-24 mx-14 md:px-8">
-                <li>
+        <div className=''>
+            <ul className='mx-auto grid w-full grid-cols-1 md:grid-cols-2 gap-5 px-8'>
+                <li className='flex justify-center'>
                     <input
                         className="peer sr-only"
                         type="radio"
@@ -20,14 +20,18 @@ const MenuTab = () => {
                         defaultChecked={selectedTab === 'coffee'}
                         onChange={() => handleTabChange('coffee')}
                     />
+
                     <label
-                        className={`flex items-center justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none ${selectedTab === 'coffee' ? 'peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-indigo-500' : ''} transition-all duration-500 ease-in-out`}
+                        className={`flex w-full md:w-2/3 justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none ${selectedTab === 'coffee' ? 'peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-indigo-500' : ''
+                            } transition-all duration-500 ease-in-out`}
                         htmlFor="coffee"
                     >
                         Coffee & Espresso
                     </label>
+
                 </li>
-                <li>
+
+                <li className='flex justify-center'>
                     <input
                         className="peer sr-only"
                         type="radio"
@@ -37,14 +41,15 @@ const MenuTab = () => {
                         defaultChecked={selectedTab === 'frappuccino'}
                         onChange={() => handleTabChange('frappuccino')}
                     />
+
                     <label
-                        className={`flex items-center justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none ${selectedTab === 'frappuccino' ? 'peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-indigo-500' : ''} transition-all duration-500 ease-in-out`}
+                        className={`flex w-full md:w-2/3 justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none ${selectedTab === 'frappuccino' ? 'peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-indigo-500' : ''
+                            } transition-all duration-500 ease-in-out`}
                         htmlFor="frappuccino"
-                    >
-                        Frappuccino
-                    </label>
+                    >Frapuccino</label>
                 </li>
-                <div className="flex flex-wrap justify-center mt-4 gap-10">
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 absolute">
                     {selectedTab === 'coffee' &&
                         coffeeMenu.map((coffee, index) => (
                             <CardComponent {...coffee} key={index} />
@@ -54,10 +59,12 @@ const MenuTab = () => {
                             <CardComponent {...coffee} key={index} />
                         ))}
                 </div>
+                
             </ul>
-            
-        </div>
 
+
+
+        </div>
 
     )
 }

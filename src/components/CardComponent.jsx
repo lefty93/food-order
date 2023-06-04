@@ -24,10 +24,10 @@ const CardComponent = ({ id, name, image, price }) => {
 
     return (
         <div className="rounded-lg border border-gray-300 flex flex-col">
-            <div className="sm:p-4 p-1">
+            <div className="sm:p-4 p-1 ">
                 <div className='mb-8'>
                     <img
-                        className="object-contain"
+                        className="object-cover md:h-[20vw] w-auto"
                         src={image}
                         alt={name} />
                     <h3
@@ -48,7 +48,7 @@ const CardComponent = ({ id, name, image, price }) => {
                 </div>
             </div>
         </div>
-            
+      
         
     )
 }

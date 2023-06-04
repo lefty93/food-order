@@ -146,10 +146,6 @@ export const frappuccinoMenu = [
 ];
 
 export const navLinks = [
-    {
-        id: "about",
-        title: "About",
-    },
 
     {
         id: "menu",
