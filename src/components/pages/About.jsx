@@ -9,7 +9,7 @@ const About = () => {
   return (
 
     <>
-      <div className='text-center relative sm:my-10 mt-[120px] mb-10 flex'>
+      <div className='text-center relative sm:my-10 mt-[120px] flex'>
         <img src={aboutbg} alt="" className='w-full h-full sm:max-w-none sm:max-h-none' />
         <motion.div initial="hidden" animate="show" variants={textVariant()} className='absolute inset-0 flex flex-col justify-center items-center text-center'>
           <h2 className='text-lg font-bold text-white mb-4'>ABOUT US</h2>

@@ -17,41 +17,39 @@ const CardComponent = ({ id, name, image, price }) => {
                 image: image,
                 price: price,
             }
-            
+
         });
         toast.success("You have add a drink.");
     }
 
-    // const notify = () => toast.success("Success Notification !", {
-    //     position: toast.POSITION.TOP_CENTER
-    // });
-
-
     return (
-        <div
-            className="border-[2px] rounded-[20px] bg-white w-full container flex flex-col sm:items-start items-center">
-
-            <img
-                className="object-contain rounded-[20px]"
-                src={image}
-                alt={name} />
-
-            <div className="p-10">
-                <h5
-                    className="mb-2 text-lg font-medium leading-tight text-black">
-                    {name}
-                </h5>
-                <button
-                    type="button"
-                    className="inline-block rounded bg-secondary px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] hover:bg-tertiary"
-                    onClick={addToCart}
-
-                >
-                    Add to basket - {price}
-                </button>
+        <div className="rounded-lg border border-gray-300 flex flex-col">
+            <div className="sm:p-4 p-1">
+                <div className='mb-8'>
+                    <img
+                        className="object-contain"
+                        src={image}
+                        alt={name} />
+                    <h3
+                        className="text-sm font-bold ml-4 md:ml:0'">
+                        {name}
+                    </h3>
+                </div>
+                
+                <div className='flex items-center gap-5 mt-5 mb-3'>
+                    <span className='ml-4 md:ml:0'>${price}</span>
+                    <button
+                        type="button"
+                        className="rounded bg-secondary px-3 pb-3 pt-2.5 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] hover:bg-tertiary"
+                        onClick={addToCart}
+                    >
+                        Add to basket
+                    </button>
+                </div>
             </div>
-            <ToastContainer autoClose={1200} />
         </div>
+            
+        
     )
 }
 

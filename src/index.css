@@ -13,6 +13,8 @@
   color-scheme: #f9f9f9;
 }
 
+
+
 @layer components {
   .nav {
     @apply relative tracking-[1px]

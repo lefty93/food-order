@@ -1,5 +1,5 @@
 
-import { americano, cappuccino, cocoa, coldbrew, dolce, doubleshot, icedespresso, latte, macchiato, matcha, mocha, press, vanilla,  } from "../assets";
+import { americano, cappuccino, cocoa, coldbrew, dolce, doubleshot, icedespresso, latte, macchiato, matcha, mocha, press, vanilla, caramel, chocolate, darkmocha, espresso, mango, javachip, greentea, mochafrappuccino, praline, raspberry  } from "../assets";
 
 export const coffeeMenu = [
     {
@@ -84,55 +84,65 @@ export const coffeeMenu = [
 
 export const frappuccinoMenu = [
     {
-        "name": "Caramel Frappuccino® Blended Beverage",
-        "image": dolce,
-        "price": "$10",
+        id: "1",
+        name: "Caramel Frappuccino® Blended Beverage",
+        image: caramel,
+        price: "10",
     },
     {
-        "name": "Chocolate Cream Chip Frappuccino® Blended Beverage",
-        "image": dolce,
-        "price": "$10",
+        id: "2",
+        name: "Chocolate Cream Chip Frappuccino® Blended Beverage",
+        image: chocolate,
+        price: "10",
     },
     {
-        "name": "Dark Mocha Frappuccino® Blended Beverage",
-        "image": dolce,
-        "price": "$10",
+        id: "3",
+        name: "Dark Mocha Frappuccino® Blended Beverage",
+        image: darkmocha,
+        price: "10",
     },
     {
-        "name": "Espresso Frappuccino® Blended Beverage",
-        "image": dolce,
-        "price": "$10",
+        id: "4",
+        name: "Espresso Frappuccino® Blended Beverage",
+        image: espresso,
+        price: "10",
     },
     {
-        "name": "Mango Passionfruit Blended Juice",
-        "image": dolce,
-        "price": "$10",
+        id: "5",
+        name: "Mango Passionfruit Blended Juice",
+        image: mango,
+        price: "10",
     },
     {
-        "name": "Java Chip Frappuccino® Blended Beverage",
-        "image": dolce,
-        "price": "$10",
+        id: "6",
+        name: "Java Chip Frappuccino® Blended Beverage",
+        image: javachip,
+        price: "10",
     },
     {
-        "name": "Green Tea Cream Frappuccino® Blended Beverage",
-        "image": dolce,
-        "price": "$10",
+        id: "7",
+        name: "Green Tea Cream Frappuccino® Blended Beverage",
+        image: greentea,
+        price: "10",
     },
     {
-        "name": "Mocha Frappuccino® Blended Beverage",
-        "image": dolce,
-        "price": "$10",
+        id: "8",
+        name: "Mocha Frappuccino® Blended Beverage",
+        image: mochafrappuccino,
+        price: "10",
     },
     {
-        "name": "Mocha Praline Frappuccino® Blended Beverage",
-        "image": dolce,
-        "price": "$10",
+        id: "9",
+        name: "Mocha Praline Frappuccino® Blended Beverage",
+        image: praline,
+        price: "10",
     },
     {
-        "name": "Raspberry Black Currant Blended Juice",
-        "image": dolce,
-        "price": "$10",
-    }
+        id: "10",
+        name: "Raspberry Black Currant Blended Juice",
+        image: raspberry,
+        price: "10",
+    },
 ];
 
 export const navLinks = [
