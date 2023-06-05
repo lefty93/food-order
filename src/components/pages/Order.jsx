@@ -10,6 +10,7 @@ import SubTotal from '../SubTotal'
 
 
 
+
 //TODO Can show items that added to cart on left side, can show total price on right side
 
 
@@ -25,9 +26,9 @@ const Order = () => {
                 </motion.div>
             </div>
 
-            <div className='mx-auto md:mx-12 max-w-full justify-center px-6 md:flex md:space-x-6 xl:px-0 gap-11'>
+            <div className='mx-auto md:mx-12 max-w-full justify-center px-6 md:flex md:space-x-6 xl:px-0 gap-11 '>
                 <div className='rounded-lg md:w-2/3 '>
-                    <div className='justify-between mb-6 rounded-lg bg-white h-full shadow-md sm:flex sm:justify-start flex flex-col'>
+                    <div className='justify-between mb-6 rounded-lg bg-white border shadow-md sm:flex sm:justify-start flex flex-col'>
                         {cart?.length === 0 ? (
                             <p className='p-8'>
                                 You have no items in your cart. To buy one or more, click "Add to basket" next to the item.

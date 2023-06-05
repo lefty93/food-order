@@ -12,7 +12,7 @@ import { popoverVariants } from '../utils/motion';
 
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
+  // const [toggle, setToggle] = useState(false);
   const [{ cart }] = useStateValue();
   const [isPopoverOpen, setPopoverOpen] = useState(false)
 
@@ -51,7 +51,7 @@ const Navbar = () => {
          
           <div className="relative">
             <Link to="/order">
-              <BsFillBagFill className="h-[24px] w-[24px]" onMouseEnter={handleMouseEnter} />
+              <BsFillBagFill className="h-[24px] w-[24px] text-secondary hover:text-tertiary" onMouseEnter={handleMouseEnter} />
             </Link>
 
             {/* red-dot notification */}
@@ -99,16 +99,21 @@ const Navbar = () => {
 
         </ul>
 
-        <div className='flex items-center justify-end flex-1 sm:hidden'>
-          <Link to="/order"><BsFillBagFill className='h-[24px] w-[24px] mr-5' /></Link>
-          <IconContext.Provider value={{ size: '24px' }}>
+        <div className='flex items-center justify-end flex-1 sm:hidden relative'>
+          <Link to="/order"><BsFillBagFill className='h-[24px] w-[24px] mr-5 text-secondary hover:text-tertiary' /></Link>
+          {/* red-dot notification */}
+          <div
+            className={`absolute right-4 top-4 ${cart?.length > 0 ? 'flex' : 'hidden'}`}
+          >
+            <span className="w-3 h-3 bg-red-500 rounded-full border-2"></span>
+          </div>
+          {/* <IconContext.Provider value={{ size: '24px' }}>
             <div onClick={() => setToggle((prev) => !prev)}>
               {toggle ? <FiX /> : <FiMenu />}
             </div>
-          </IconContext.Provider>
+          </IconContext.Provider> */}
 
-          <div className={`${toggle ? 'flex' : 'hidden'}`}>
-
+          {/* <div className={`${toggle ? 'flex' : 'hidden'}`}>
             <ul className={`flex-row list-none`}>
               {navLinks.map((navlink) => (
                 <li key={navlink.id}
@@ -119,7 +124,7 @@ const Navbar = () => {
               ))}
 
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>
