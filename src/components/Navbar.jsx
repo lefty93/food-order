@@ -4,7 +4,6 @@ import { styles } from '../styles';
 import { Link } from 'react-router-dom';
 import { logo } from '../assets';
 import { navLinks } from '../constants';
-import { IconContext } from 'react-icons';
 import { BsFillBagFill } from "react-icons/bs";
 import { useStateValue } from '../context/StateProvider';
 import { motion } from 'framer-motion';
@@ -48,7 +47,7 @@ const Navbar = () => {
             </li>
           ))}
 
-         
+
           <div className="relative">
             <Link to="/order">
               <BsFillBagFill className="h-[24px] w-[24px] text-secondary hover:text-tertiary" onMouseEnter={handleMouseEnter} />
@@ -85,7 +84,7 @@ const Navbar = () => {
                         <div className="text-xs text-gray-500">QTY: {item.count}</div>
                       </div>
                     </li>
-                    
+
                   ))}
                 </ul>
                 <div className="mt-4 text-center">

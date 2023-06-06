@@ -6,14 +6,6 @@ import { useStateValue } from '../../context/StateProvider'
 import CartItems from '../CartItems'
 import SubTotal from '../SubTotal'
 
-
-
-
-
-
-//TODO Can show items that added to cart on left side, can show total price on right side
-
-
 const Order = () => {
     const [{ cart }, dispatch] = useStateValue();
 

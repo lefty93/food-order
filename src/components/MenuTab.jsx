@@ -44,7 +44,7 @@ const MenuTab = () => {
                         Frappuccino
                     </label>
                 </li>
-                <div className="flex flex-wrap justify-center mt-4 gap-10">
+                <div className="flex justify-center mt-4 gap-10 flex-wrap md:grid md:grid-cols-3">
                     {selectedTab === 'coffee' &&
                         coffeeMenu.map((coffee, index) => (
                             <CardComponent {...coffee} key={index} />
